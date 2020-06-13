@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>hackasticker_main_page (based off of W3.CSS Template)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Dosis", sans-serif;}
+
+
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/static/patternpng.png");
+  min-height: 100%;
+}
+</style>
+
+<body>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Created by Drew Ehrlich and Farhan Saeed for SameHomeDifferentHacks</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px;-webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;">hackasticker</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>hackasticker</b></span>
+  </div>
+  <div class = "textbox" style="position:absolute; left:41%; top:57%;" align=center>
+    <form method="POST" action="/parse">
+      <input  class = "text" type="text" id="user_i" name="user_i"><br></input>
+      <button type="submit">Input your hackathon name and then click this</button>
+
+    </form>
+  </div>
+</header>
+
+
+</body>
+</html>
