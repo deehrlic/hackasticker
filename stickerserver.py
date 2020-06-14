@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, send_file
-from google.cloud import storage
+
 import render_sticker
 
 
