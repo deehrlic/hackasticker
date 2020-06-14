@@ -1,4 +1,8 @@
 from flask import Flask, render_template, request, send_file
+from google.cloud import storage
+import render_sticker
+
+
 
 app = Flask(__name__)
 
@@ -8,7 +12,14 @@ def home():
 
 @app.route("/parse",methods=['GET', 'POST'])
 def gen():
-    return 1;
+    if request.method == "POST":
+        name = request.form['user_i']
+
+    render_sticker.addText(name)
+    return send_file('tmp.png', mimetype='image/gif')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+#gs://stickermaker-62751.appspot.com/
